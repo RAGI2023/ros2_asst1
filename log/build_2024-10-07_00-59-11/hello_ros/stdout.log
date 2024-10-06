@@ -1,0 +1,28 @@
+[35m[1mConsolidate compiler generated dependencies of target tf[0m
+[ 37%] Built target MYNODE
+[ 50%] Built target spawn
+[ 62%] [32mBuilding CXX object CMakeFiles/follow.dir/src/follow_turtle.cpp.o[0m
+[ 87%] Built target tf
+[100%] [32m[1mLinking CXX executable follow[0m
+[100%] Built target follow
+-- Install configuration: ""
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/MYNODE
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/spawn
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/tf
+-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/follow
+-- Set runtime path of "/home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/follow" to ""
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/ament_index/resource_index/package_run_dependencies/hello_ros
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/ament_index/resource_index/parent_prefix_path/hello_ros
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/ament_prefix_path.sh
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/path.sh
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/path.dsv
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.bash
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.sh
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.zsh
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.dsv
+-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/package.dsv
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/ament_index/resource_index/packages/hello_ros
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/cmake/hello_rosConfig.cmake
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/cmake/hello_rosConfig-version.cmake
+-- Up-to-date: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/package.xml

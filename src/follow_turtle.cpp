@@ -49,6 +49,8 @@ private:
     std::vector<std::string> Catchers;
     bool reach_flag;
 
+    double x_offset, y_off_set, ang_offset;
+
     PIDController linearPID_;
     PIDController angularPID_;
 
@@ -56,7 +58,7 @@ private:
     bool inital_flag;
     geometry_msgs::msg::TransformStamped tf_inital;
 
-    void follow(std::string target, std::string catcher, rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr & publisher_)
+    void follow(std::string target, std::string catcher, rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr & publisher_, size_t i)
     {
         geometry_msgs::msg::TransformStamped tf;     
         try
@@ -91,9 +93,9 @@ private:
         }
 
         // message.linear.x = 0.5 * hypot(t.translation.x, t.translation.y);
-        message.linear.x = linearPID_.compute(hypot(t.translation.x, t.translation.y), 0.1);
+        message.linear.x = linearPID_.compute(hypot(t.translation.x - x_offset * i, t.translation.y - y_off_set * i), 0.1);
         // message.angular.z = 1.0 * atan2(t.translation.y, t.translation.x);
-        message.angular.z = angularPID_.compute(atan2(t.translation.y, t.translation.x), 0.1);
+        message.angular.z = angularPID_.compute(atan2(t.translation.y, t.translation.x) + ang_offset * i, 0.1);
         RCLCPP_INFO(this->get_logger(), "Publishing: linear.x: '%f', angular.z: '%f'", message.linear.x, message.angular.z);
         publisher_->publish(message);
     }
@@ -101,14 +103,15 @@ private:
     void timer_callback()
     {
         for (size_t i = 0; i < publishers_.size() && i < Catchers.size(); i++){
-            follow(Target, Catchers[i], publishers_[i]);
+            follow(Target, Catchers[i], publishers_[i], i);
         }
         
 
     }
 public: 
     node(std::string target, std::vector<std::string> catchers): Node("follower"), Target(target), Catchers(catchers),
-        linearPID_(1.0, 0.0, 0.0), angularPID_(1.0, 0.0, 0.0)
+        x_offset(1.5), y_off_set(1.5), ang_offset(0.0),
+        linearPID_(1.5, 0.0, 0.0), angularPID_(1.25, 0.0, 0.0)
     {
         tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
         tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
