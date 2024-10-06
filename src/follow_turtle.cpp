@@ -4,6 +4,9 @@
 #include "tf2_ros/transform_listener.h"
 #include "tf2_ros/buffer.h"
 #include "tf2/exceptions.h"
+#include <cstddef>
+#include <string>
+#include <vector>
 
 class PIDController
 {
@@ -38,11 +41,12 @@ private:
 class node: public rclcpp::Node
 {
 private:
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
+    std::vector<rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr> publishers_;
     rclcpp::TimerBase::SharedPtr timer_;
     std::shared_ptr<tf2_ros::TransformListener> tf_listener_{nullptr};
     std::unique_ptr<tf2_ros::Buffer> tf_buffer_;
-    std::string target,catcher;
+    std::string Target;
+    std::vector<std::string> Catchers;
     bool reach_flag;
 
     PIDController linearPID_;
@@ -52,9 +56,8 @@ private:
     bool inital_flag;
     geometry_msgs::msg::TransformStamped tf_inital;
 
-    void timer_callback()
+    void follow(std::string target, std::string catcher, rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr & publisher_)
     {
-
         geometry_msgs::msg::TransformStamped tf;     
         try
         {
@@ -93,10 +96,18 @@ private:
         message.angular.z = angularPID_.compute(atan2(t.translation.y, t.translation.x), 0.1);
         RCLCPP_INFO(this->get_logger(), "Publishing: linear.x: '%f', angular.z: '%f'", message.linear.x, message.angular.z);
         publisher_->publish(message);
+    }
+
+    void timer_callback()
+    {
+        for (size_t i = 0; i < publishers_.size() && i < Catchers.size(); i++){
+            follow(Target, Catchers[i], publishers_[i]);
+        }
+        
 
     }
 public: 
-    node(std::string target, std::string catcher): Node("follower"), target(target), catcher(catcher),
+    node(std::string target, std::vector<std::string> catchers): Node("follower"), Target(target), Catchers(catchers),
         linearPID_(1.0, 0.0, 0.0), angularPID_(1.0, 0.0, 0.0)
     {
         tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
@@ -104,7 +115,10 @@ public:
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100),
             std::bind(&node::timer_callback, this));
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>(catcher+"/cmd_vel", 10);
+        for (const auto & catcher : Catchers){
+            publishers_.push_back(this->create_publisher<geometry_msgs::msg::Twist>(catcher+"/cmd_vel", 10));
+        }
+        
         RCLCPP_INFO(this->get_logger(), "Hello, world");   
     }
     ~node()
@@ -116,10 +130,14 @@ public:
 class ROS_EVENT_LOOP
 {
 public:
-    ROS_EVENT_LOOP(int argc, char *argv[], std::string target,std::string catcher)
+    ROS_EVENT_LOOP(int argc, char *argv[])
     {
         rclcpp::init(argc, argv);
-        rclcpp::spin(std::make_shared<node>(target,catcher));
+        std::vector<std::string> catchers;
+        for (int i = 2; i < argc; i++){
+            catchers.push_back(argv[i]);
+        }
+        rclcpp::spin(std::make_shared<node>(argv[1],catchers));
     }
     ~ROS_EVENT_LOOP()
     {
@@ -129,11 +147,11 @@ public:
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3 )
+    if (argc < 2 )
     {
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "usage: follow target catcher");
         return 1;
     }
-    ROS_EVENT_LOOP(argc, argv, argv[1], argv[2]);
+    ROS_EVENT_LOOP(argc, argv);
     return 0;
 }
