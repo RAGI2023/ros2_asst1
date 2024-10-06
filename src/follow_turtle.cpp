@@ -5,6 +5,36 @@
 #include "tf2_ros/buffer.h"
 #include "tf2/exceptions.h"
 
+class PIDController
+{
+public:
+    PIDController(double Kp, double Ki, double Kd)
+        : Kp_(Kp), Ki_(Ki), Kd_(Kd), prev_error_(0.0), integral_(0.0) {}
+
+    double compute(double error, double dt)
+    {
+        // 计算积分项
+        integral_ += error * dt;
+
+        // 计算微分项
+        double derivative = (error - prev_error_) / dt;
+
+        // 计算控制输出
+        double output = Kp_ * error + Ki_ * integral_ + Kd_ * derivative;
+
+        // 更新上一次的误差
+        prev_error_ = error;
+
+        return output;
+    }
+
+private:
+    double Kp_, Ki_, Kd_;  // PID增益
+    double prev_error_;    // 上一次的误差
+    double integral_;      // 积分项
+};
+
+
 class node: public rclcpp::Node
 {
 private:
@@ -14,6 +44,9 @@ private:
     std::unique_ptr<tf2_ros::Buffer> tf_buffer_;
     std::string target,catcher;
     bool reach_flag;
+
+    PIDController linearPID_;
+    PIDController angularPID_;
 
     // Well, these two variables are not used in the code, but they may help in the task
     bool inital_flag;
@@ -33,14 +66,12 @@ private:
             return;
         }
 
-        // now the code was implemented to make the catcher follow the target
-        // you should modify it to keep the relative position and orientation between the target and the catcher
-        // you can first try to make the catcher keep a fixed distance from the target
-        // then you can try to make the catcher keep a fixed angle from the target
-        // these two tasks are not easy, but you can do it!
+        
 
         auto t = tf.transform;
         auto message = geometry_msgs::msg::Twist();
+
+
 
         if (hypot(t.translation.x, t.translation.y) < 0.1)
         {
@@ -56,14 +87,17 @@ private:
             reach_flag = false;
         }
 
-        message.linear.x = 0.5 * hypot(t.translation.x, t.translation.y);
-        message.angular.z = 1.0 * atan2(t.translation.y, t.translation.x);
+        // message.linear.x = 0.5 * hypot(t.translation.x, t.translation.y);
+        message.linear.x = linearPID_.compute(hypot(t.translation.x, t.translation.y), 0.1);
+        // message.angular.z = 1.0 * atan2(t.translation.y, t.translation.x);
+        message.angular.z = angularPID_.compute(atan2(t.translation.y, t.translation.x), 0.1);
         RCLCPP_INFO(this->get_logger(), "Publishing: linear.x: '%f', angular.z: '%f'", message.linear.x, message.angular.z);
         publisher_->publish(message);
 
     }
 public: 
-    node(std::string target, std::string catcher): Node("follower"), target(target), catcher(catcher)
+    node(std::string target, std::string catcher): Node("follower"), target(target), catcher(catcher),
+        linearPID_(1.0, 0.0, 0.0), angularPID_(1.0, 0.0, 0.0)
     {
         tf_buffer_ = std::make_unique<tf2_ros::Buffer>(this->get_clock());
         tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);

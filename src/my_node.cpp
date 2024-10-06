@@ -1,26 +1,32 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "geometry_msgs/msg/twist.hpp"
+#include <geometry_msgs/msg/detail/twist__struct.hpp>
 #include <string>
 
 class node: public rclcpp::Node
 {
 private:
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     rclcpp::TimerBase::SharedPtr timer_;
+    
     void timer_callback()
     {
-        auto message = std_msgs::msg::String();
-        message.data = "Hello, world!";
-        RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
-        publisher_->publish(message);
+        auto msg = geometry_msgs::msg::Twist();
+        msg.linear.x = 1.0;
+        msg.angular.z = 1.0;
+        // RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
+        publisher_->publish(msg);
     }
 public:
     node(std::string st): Node(st)
     {
         RCLCPP_INFO(this->get_logger(), "Hello, world!");
-        publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
+        
+
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", 1);
         timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(500),
+            std::chrono::milliseconds(100),
             std::bind(&node::timer_callback, this));
     }
     ~node()
