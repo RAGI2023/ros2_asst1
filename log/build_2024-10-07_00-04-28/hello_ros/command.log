@@ -1,0 +1,2 @@
+Invoking command in '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros -- -j20 -l20
+Invoked command in '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros -- -j20 -l20

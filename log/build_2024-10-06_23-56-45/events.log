@@ -1,0 +1,106 @@
+[0.000000] (-) TimerEvent: {}
+[0.000177] (hello_ros) JobQueued: {'identifier': 'hello_ros', 'dependencies': OrderedDict()}
+[0.000278] (hello_ros) JobStarted: {'identifier': 'hello_ros'}
+[0.005653] (hello_ros) JobProgress: {'identifier': 'hello_ros', 'progress': 'cmake'}
+[0.006459] (hello_ros) JobProgress: {'identifier': 'hello_ros', 'progress': 'build'}
+[0.006499] (hello_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros', '--', '-j20', '-l20'], 'cwd': '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'yin'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('DDSGEN', 'xxx/fastdds_ws/src/fastddsgen/scripts'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater/lib:/home/yin/fastdds_ws/install/fastdds/lib:/home/yin/fastdds_ws/install/fastcdr/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/yin'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/yin/ros2_asst1_ws'), ('TERM_PROGRAM_VERSION', '1.94.0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '2504'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install:/home/yin/fastdds_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'yin'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/yin/fastdds_ws/install/foonathan_memory_vendor/lib/x86_64-linux-gnu/pkgconfig:/home/yin/fastdds_ws/install/foonathan_memory_vendor/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'yin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/yin/fastdds_ws/install/fastdds/bin:/opt/ros/humble/bin:/home/yin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:xxx/fastdds_ws/gradle-6.4/bin/:xxx/fastdds_ws/gradle-6.4/bin/'), ('SESSION_MANAGER', 'local/yin-OMEN-by-HP-Gaming-Laptop-16-wf0xxx:@/tmp/.ICE-unix/2300,unix/yin-OMEN-by-HP-Gaming-Laptop-16-wf0xxx:/tmp/.ICE-unix/2300'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/929d11bb_1ba2_4a7b_bd06_4e3913369c3b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U6ADV2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f76a52f245.sock'), ('GNOME_TERMINAL_SERVICE', ':1.114'), ('CSROOT', '/home/yin/commands'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('ROSDISTRO_INDEX_URL', 'https://mirrors.tuna.tsinghua.edu.cn/rosdistro/index-v4.yaml'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater:/home/yin/fastdds_ws/install/fastdds:/home/yin/fastdds_ws/install/foonathan_memory_vendor:/home/yin/fastdds_ws/install/fastcdr:/opt/ros/humble')]), 'shell': False}
+[0.047695] (hello_ros) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target tf\x1b[0m\n'}
+[0.064848] (hello_ros) StdoutLine: {'line': b'[ 25%] Built target MYNODE\n'}
+[0.065665] (hello_ros) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/tf.dir/src/tf2_node.cpp.o\x1b[0m\n'}
+[0.066433] (hello_ros) StdoutLine: {'line': b'[ 62%] Built target spawn\n'}
+[0.067377] (hello_ros) StdoutLine: {'line': b'[ 87%] Built target follow\n'}
+[0.099443] (-) TimerEvent: {}
+[0.199831] (-) TimerEvent: {}
+[0.300264] (-) TimerEvent: {}
+[0.400660] (-) TimerEvent: {}
+[0.501046] (-) TimerEvent: {}
+[0.601435] (-) TimerEvent: {}
+[0.701832] (-) TimerEvent: {}
+[0.802218] (-) TimerEvent: {}
+[0.902608] (-) TimerEvent: {}
+[1.002994] (-) TimerEvent: {}
+[1.103378] (-) TimerEvent: {}
+[1.203763] (-) TimerEvent: {}
+[1.304172] (-) TimerEvent: {}
+[1.404557] (-) TimerEvent: {}
+[1.504962] (-) TimerEvent: {}
+[1.605354] (-) TimerEvent: {}
+[1.705742] (-) TimerEvent: {}
+[1.806121] (-) TimerEvent: {}
+[1.906434] (-) TimerEvent: {}
+[2.006823] (-) TimerEvent: {}
+[2.107218] (-) TimerEvent: {}
+[2.207612] (-) TimerEvent: {}
+[2.307998] (-) TimerEvent: {}
+[2.408395] (-) TimerEvent: {}
+[2.508790] (-) TimerEvent: {}
+[2.609187] (-) TimerEvent: {}
+[2.709578] (-) TimerEvent: {}
+[2.809879] (-) TimerEvent: {}
+[2.910203] (-) TimerEvent: {}
+[3.010608] (-) TimerEvent: {}
+[3.110996] (-) TimerEvent: {}
+[3.211379] (-) TimerEvent: {}
+[3.311771] (-) TimerEvent: {}
+[3.412074] (-) TimerEvent: {}
+[3.512476] (-) TimerEvent: {}
+[3.612872] (-) TimerEvent: {}
+[3.713267] (-) TimerEvent: {}
+[3.813663] (-) TimerEvent: {}
+[3.914109] (-) TimerEvent: {}
+[4.014498] (-) TimerEvent: {}
+[4.114877] (-) TimerEvent: {}
+[4.215277] (-) TimerEvent: {}
+[4.315667] (-) TimerEvent: {}
+[4.416061] (-) TimerEvent: {}
+[4.516448] (-) TimerEvent: {}
+[4.616834] (-) TimerEvent: {}
+[4.717243] (-) TimerEvent: {}
+[4.817542] (-) TimerEvent: {}
+[4.917940] (-) TimerEvent: {}
+[5.018333] (-) TimerEvent: {}
+[5.118721] (-) TimerEvent: {}
+[5.219117] (-) TimerEvent: {}
+[5.319494] (-) TimerEvent: {}
+[5.419881] (-) TimerEvent: {}
+[5.520293] (-) TimerEvent: {}
+[5.620729] (-) TimerEvent: {}
+[5.721186] (-) TimerEvent: {}
+[5.821625] (-) TimerEvent: {}
+[5.922078] (-) TimerEvent: {}
+[5.931265] (hello_ros) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable tf\x1b[0m\n'}
+[6.022276] (-) TimerEvent: {}
+[6.122711] (-) TimerEvent: {}
+[6.223101] (-) TimerEvent: {}
+[6.259162] (hello_ros) StdoutLine: {'line': b'[100%] Built target tf\n'}
+[6.273381] (hello_ros) CommandEnded: {'returncode': 0}
+[6.321325] (hello_ros) JobProgress: {'identifier': 'hello_ros', 'progress': 'install'}
+[6.323190] (-) TimerEvent: {}
+[6.329720] (hello_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros'], 'cwd': '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7897/'), ('no_proxy', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'yin'), ('all_proxy', 'socks://127.0.0.1:7897/'), ('DDSGEN', 'xxx/fastdds_ws/src/fastddsgen/scripts'), ('XDG_SESSION_TYPE', 'wayland'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater/lib:/home/yin/fastdds_ws/install/fastdds/lib:/home/yin/fastdds_ws/install/fastcdr/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/yin'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('OLDPWD', '/home/yin/ros2_asst1_ws'), ('TERM_PROGRAM_VERSION', '1.94.0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '2504'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('https_proxy', 'http://127.0.0.1:7897/'), ('COLCON_PREFIX_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install:/home/yin/fastdds_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'yin'), ('ALL_PROXY', 'socks://127.0.0.1:7897/'), ('http_proxy', 'http://127.0.0.1:7897/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/yin/fastdds_ws/install/foonathan_memory_vendor/lib/x86_64-linux-gnu/pkgconfig:/home/yin/fastdds_ws/install/foonathan_memory_vendor/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'yin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/yin/fastdds_ws/install/fastdds/bin:/opt/ros/humble/bin:/home/yin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:xxx/fastdds_ws/gradle-6.4/bin/:xxx/fastdds_ws/gradle-6.4/bin/'), ('SESSION_MANAGER', 'local/yin-OMEN-by-HP-Gaming-Laptop-16-wf0xxx:@/tmp/.ICE-unix/2300,unix/yin-OMEN-by-HP-Gaming-Laptop-16-wf0xxx:/tmp/.ICE-unix/2300'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/929d11bb_1ba2_4a7b_bd06_4e3913369c3b'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.U6ADV2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f76a52f245.sock'), ('GNOME_TERMINAL_SERVICE', ':1.114'), ('CSROOT', '/home/yin/commands'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('ROSDISTRO_INDEX_URL', 'https://mirrors.tuna.tsinghua.edu.cn/rosdistro/index-v4.yaml'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7897/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/yin/下载/diagnostics/diagnostic_updater/install/diagnostic_updater:/home/yin/fastdds_ws/install/fastdds:/home/yin/fastdds_ws/install/foonathan_memory_vendor:/home/yin/fastdds_ws/install/fastcdr:/opt/ros/humble')]), 'shell': False}
+[6.335724] (hello_ros) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.335894] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/MYNODE\n'}
+[6.336406] (hello_ros) StdoutLine: {'line': b'-- Set runtime path of "/home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/MYNODE" to ""\n'}
+[6.336524] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/spawn\n'}
+[6.336777] (hello_ros) StdoutLine: {'line': b'-- Set runtime path of "/home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/spawn" to ""\n'}
+[6.336873] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/tf\n'}
+[6.338594] (hello_ros) StdoutLine: {'line': b'-- Set runtime path of "/home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/tf" to ""\n'}
+[6.338647] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/follow\n'}
+[6.339196] (hello_ros) StdoutLine: {'line': b'-- Set runtime path of "/home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/lib/hello_ros/follow" to ""\n'}
+[6.339313] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/ament_index/resource_index/package_run_dependencies/hello_ros\n'}
+[6.339356] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/ament_index/resource_index/parent_prefix_path/hello_ros\n'}
+[6.339442] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/ament_prefix_path.sh\n'}
+[6.339484] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/ament_prefix_path.dsv\n'}
+[6.339542] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/path.sh\n'}
+[6.339605] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/environment/path.dsv\n'}
+[6.339642] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.bash\n'}
+[6.339680] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.sh\n'}
+[6.339753] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.zsh\n'}
+[6.339796] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/local_setup.dsv\n'}
+[6.339869] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/package.dsv\n'}
+[6.339909] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/ament_index/resource_index/packages/hello_ros\n'}
+[6.339978] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/cmake/hello_rosConfig.cmake\n'}
+[6.340046] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/cmake/hello_rosConfig-version.cmake\n'}
+[6.340100] (hello_ros) StdoutLine: {'line': b'-- Installing: /home/yin/ros2_asst1_ws/src/ros2_asst1/install/hello_ros/share/hello_ros/package.xml\n'}
+[6.341656] (hello_ros) CommandEnded: {'returncode': 0}
+[6.400457] (hello_ros) JobEnded: {'identifier': 'hello_ros', 'rc': 0}
+[6.401009] (-) EventReactorShutdown: {}

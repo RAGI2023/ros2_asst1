@@ -1,0 +1,13 @@
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/uninstall.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/hello_ros_uninstall.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/MYNODE.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/spawn.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/tf.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/follow.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/test.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/edit_cache.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/rebuild_cache.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/list_install_components.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/install.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/install/local.dir
+/home/yin/ros2_asst1_ws/src/ros2_asst1/build/hello_ros/CMakeFiles/install/strip.dir
