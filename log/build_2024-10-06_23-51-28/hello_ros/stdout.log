@@ -1,8 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target spawn[0m
-[35m[1mConsolidate compiler generated dependencies of target MYNODE[0m
-[35m[1mConsolidate compiler generated dependencies of target tf[0m
-[35m[1mConsolidate compiler generated dependencies of target follow[0m
-[ 25%] Built target spawn
-[ 50%] Built target MYNODE
-[ 62%] [32mBuilding CXX object CMakeFiles/tf.dir/src/tf2_node.cpp.o[0m
-[ 87%] Built target follow
