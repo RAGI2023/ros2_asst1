@@ -78,7 +78,7 @@ private:
 
 
 
-        if (hypot(t.translation.x, t.translation.y) < 0.1)
+        if (hypot(t.translation.x - x_offset * i, t.translation.y - y_off_set * i) < 0.1)
         {
             message.linear.x = 0.0;
             message.angular.z = 0.0;
