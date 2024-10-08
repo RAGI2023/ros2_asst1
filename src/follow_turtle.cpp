@@ -95,7 +95,7 @@ private:
         // message.linear.x = 0.5 * hypot(t.translation.x, t.translation.y);
         message.linear.x = linearPID_.compute(hypot(t.translation.x - x_offset * i, t.translation.y - y_off_set * i), 0.1);
         // message.angular.z = 1.0 * atan2(t.translation.y, t.translation.x);
-        message.angular.z = angularPID_.compute(atan2(t.translation.y, t.translation.x) + ang_offset * i, 0.1);
+        message.angular.z = angularPID_.compute(atan2(t.translation.y - y_off_set * i, t.translation.x - x_offset * i) /* + ang_offset * i */, 0.1);
         RCLCPP_INFO(this->get_logger(), "Publishing: linear.x: '%f', angular.z: '%f'", message.linear.x, message.angular.z);
         publisher_->publish(message);
     }
